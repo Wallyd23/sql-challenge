@@ -20,3 +20,27 @@ CREATE TABLE IF NOT EXISTS public."Dept_mangement"
 )
 
 
+CREATE TABLE IF NOT EXISTS public."Empolyees"
+(
+    emp_no character varying COLLATE pg_catalog."default" NOT NULL,
+    emp_title_id character varying COLLATE pg_catalog."default",
+    birth_date date,
+    first_name character varying COLLATE pg_catalog."default",
+    last_name character varying COLLATE pg_catalog."default",
+    sex character varying COLLATE pg_catalog."default",
+    hire_date date,
+    CONSTRAINT "Empolyees_pkey" PRIMARY KEY (emp_no)
+)
+
+CREATE TABLE IF NOT EXISTS public."Salaries"
+(
+    emp_no character varying COLLATE pg_catalog."default",
+    salary character varying COLLATE pg_catalog."default"
+)
+
+CREATE TABLE IF NOT EXISTS public."Titles"
+(
+    titles character varying COLLATE pg_catalog."default",
+    title_id character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Titles_pkey" PRIMARY KEY (title_id)
+)
